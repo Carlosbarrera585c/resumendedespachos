@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5rem 0;
+    background: linear-gradient(90deg, #d01317, #21130d);
+    color: white;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pagination {
+    justify-content: center;
+}
+
+table {
+    table-layout: auto !important;
+    word-break: break-word;
+    white-space: normal;
+}
+
+table th {
+    font-size: 0.75rem;
+}
+
+table td {
+    font-size: 0.85rem;
+}
+
+.negativo {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-filtrar {
+    background-color: #d01317;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-filtrar:hover {
+    background-color: #a81012;
+}
+
+.btn-limpiar {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-limpiar:hover {
+    background-color: #333;
+}
+
+.resaltado-pendiente {
+    background-color: #fff3cd !important;
+}
