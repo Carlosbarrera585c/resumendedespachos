@@ -77,9 +77,9 @@ function obtener_datos($transportadoras_filtro = [])
     $fecha_limite = $hace_60_dias->format('Y-m-d');
     $fecha_fin = $hoy->format('Y-m-d');
 
-    $dsn_wms = 'SERVINETWMS';
-    $user_wms = 'sysdba';
-    $pass_wms = 'masterkey';
+    $dsn_wms = '';
+    $user_wms = '';
+    $pass_wms = '';
     $conn_wms = odbc_connect($dsn_wms, $user_wms, $pass_wms) or die("Error al conectar a WMS: " . odbc_errormsg());
 
     $sql_wms = "
@@ -134,9 +134,9 @@ function obtener_datos($transportadoras_filtro = [])
     $transportadoras_unicas = array_unique($transportadoras_unicas);
 
     $tiempos_promesa_map = [];
-    $dsn_estado = 'EstadoTransportadoras';
-    $user_estado = 'root';
-    $pass_estado = '*.S1stemas';
+    $dsn_estado = '';
+    $user_estado = '';
+    $pass_estado = '';
     $conn_estado = odbc_connect($dsn_estado, $user_estado, $pass_estado);
     if ($conn_estado) {
         $sql_tiempos = "SELECT ciudad, dias_promesa FROM tiempos_entrega";
@@ -261,3 +261,4 @@ function obtener_lista_transportadoras()
     odbc_close($conn_wms);
     return $transportadoras;
 }
+
